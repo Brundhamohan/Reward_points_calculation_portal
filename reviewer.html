@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reviewer-login</title>
+    <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+    <center>
+    <form onsubmit="return validateForm()">
+        <h1>Login</h1>
+        <label>Bitsathy Mail</label>
+        <input type="text" id="email">
+        <label>Password</label>
+        <input type="password" id="password">
+        <button type="submit">Login</button>
+        <p id="error-message" style="color: red;"></p>
+    </form>
+    </center>
+
+    <script>
+        function validateForm() {
+            var email = document.getElementById('email').value;
+            var password = document.getElementById('password').value;
+
+            
+            var emailPattern = /^[a-zA-Z0-9._-]+@bitsathy.ac.in$/;
+
+            if (!emailPattern.test(email)) {
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = 'Email must end with @bitsathy.ac.in';
+                return false; 
+            }
+
+            if (email === 'brundha.se22@bitsathy.ac.in' && password === '12345678') {
+                window.location.href = 'reviewerpage.html'; 
+                return false; 
+            } else {
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = 'Wrong email or password. Please try again.';
+                return false; 
+            }
+        }
+    </script>
+</body>
+</html>

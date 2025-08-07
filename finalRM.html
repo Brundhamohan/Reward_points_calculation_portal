@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Total Mark</title>
+</head>
+<style>
+    .id{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top : 20px ;
+    background:rgb(255, 255, 255);
+    width:300px;
+    height: 200px;
+   
+    border-radius: 20px;
+    box-shadow:0 0 30px;
+    margin-left: 35%;
+    margin-top: 200px;
+    }
+
+h2{
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 600;
+    
+}
+p{
+    font-size: 20px;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+</style>
+<body class="id">
+    <center>
+
+<h2>Total Marks</h2><br>
+<p id="sumResult"></p>
+<script>
+    var urlParams = new URLSearchParams(window.location.search);
+    var sum = urlParams.get('sum');
+    var convertedSum = (parseFloat(sum) / 100) * 60;
+    document.getElementById('sumResult').textContent = 'Total marks (out of 60) : ' + convertedSum.toFixed(2);
+</script>

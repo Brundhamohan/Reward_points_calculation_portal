@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviewer Mark</title>
+<style>
+:root { 
+  --background-color1: #fafaff; 
+  --background-color2: #ffffff; 
+  --background-color3: #ededed; 
+  --background-color4: #cad7fda4; 
+  --primary-color: #4b49ac; 
+  --secondary-color: #0c007d; 
+  --Border-color: #3f0097; 
+  --one-use-color: #3f0097; 
+  --two-use-color: #5500cb; 
+} 
+body { 
+  background-color: var(--background-color4); 
+  max-width: 100%; 
+  overflow-x: hidden; 
+} 
+header { 
+  height: 80px; 
+  width: 100vw; 
+  padding: 0 30px; 
+  background-color: var(--background-color1); 
+  position: relative; 
+  z-index: 100; 
+  box-shadow: 1px 1px 15px rgba(223, 224, 225, 0.825); 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 0px;
+} 
+.logo { 
+  font-size: 27px; 
+  font-weight: 600; 
+  color: rgb(74, 77, 75); 
+} 
+  
+.icn { 
+  height: 30px; 
+} 
+.menuicn { 
+  cursor: pointer; 
+} 
+  
+.searchbar, 
+.message, 
+.logosec { 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+} 
+  
+.searchbar2 { 
+  display: none; 
+} 
+  
+.logosec { 
+  gap: 60px; 
+} 
+.searchbar input { 
+  width: 250px; 
+  height: 42px; 
+  border-radius: 50px 0 0 50px; 
+  background-color: var(--background-color3); 
+  padding: 0 20px; 
+  font-size: 15px; 
+  outline: none; 
+  border: none; 
+} 
+.searchbtn { 
+  width: 50px; 
+  height: 42px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 30%;
+  border-radius: 0px 50px 50px 0px; 
+  background-color:var(--background-color2) ; 
+  cursor: pointer; 
+} 
+.icnsrchicn{
+    height: 20px;
+    width: 25px;
+    border-radius: 20%;
+}
+  
+.message { 
+  gap: 30px; 
+  position: relative; 
+  cursor: pointer; 
+} 
+.circle { 
+  height: 7px; 
+  width: 7px; 
+  position: absolute; 
+  background-color: #fa7bb4; 
+  border-radius: 50%; 
+  left: 9px;
+  margin-left: 20px; 
+  top: 8px; 
+} 
+.dp { 
+  height: 40px; 
+  width: 40px;
+  border-radius: 50%; 
+  display: flex; 
+  margin-right: 70px;
+} 
+   
+    .table{
+    display: flex;
+    justify-content:left;
+    align-items:center;
+    background-color:rgb(186, 186, 186);
+    width:35%;
+    padding-bottom: 20px;
+    height: 650px;
+    border: 0px solid;
+    border-radius: 10px;
+    border-spacing: 30px;
+    box-shadow: 0 0 5px;
+    margin-left: 50px;
+    margin-top: 50px;  
+}
+input{
+      width: 300px;
+      padding: 3px;
+}
+.div{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+.sub {
+   
+    margin-left: 60%;
+    margin-top: 30px;
+    margin-right: 20px;
+    padding: 5px;
+    background-color:lightgreen ;
+    border-radius: 5px;
+    
+}
+.Re {
+   
+   
+   margin-top: 30px;
+   margin-right: 20px;
+   padding: 5px;
+   background-color: lightgreen;
+   border-radius: 5px;
+   
+}
+h2{
+  margin-left:45%;
+  margin-top: 40px;
+  font-size: 27px;
+  font-weight: 500;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#sumResult {
+  text-align: center; /* Align text to center */
+  font-size: 24px; /* Set font size */
+  margin-top: 20px; /* Add some top margin */
+  font-weight: bold; /* Make the text bold */
+}
+</style>
+</head>
+<body>
+<header> 
+    <div class="logosec"> 
+        <div class="logo">Reviewer Dashboard</div> 
+      
+    </div> 
+
+    <div class="searchbar"> 
+        <input type="text" 
+               placeholder="Search"> 
+        <div class="searchbtn"> 
+          <img src= 
+          "C:\Users\Brundha\OneDrive\Desktop\rp calculation portal\search.png"
+                class="icnsrchicn" 
+                alt="search-icon"> 
+          </div> 
+    </div> 
+
+  
+    </div> 
+    <div class="message"> 
+      <div class="circle"></div> 
+      <img src= 
+"https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/8.png" 
+           class="icn" 
+           alt=""> 
+      <div class="dp"> 
+        <img src= 
+       " C:\Users\Brundha\OneDrive\Desktop\rp calculation portal\user.jpeg"
+              class="dpicn" 
+              alt="dp"> 
+        </div> 
+  </div>
+</header>
+<div class="Mark">
+  <h2>Reviewer Mark</h2>
+  <center>
+    <table id="markTable" class="table">
+        <tr>
+            <td>Content Knowledge</td>
+            <td><input type="number"
+             min="0"
+                 max="10">
+            
+         </tr>
+         <tr>
+             <td>Delivery</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Visual Aids</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Time management</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Engagement</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Creativity</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Clarity of message </td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Team Work(if applicable)</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+             
+          </tr>
+          <tr>
+             <td>Q/A session</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+          </tr>
+          <tr>
+             <td>Overall Impact</td>
+             <td><input type="number"
+                 min="0"
+                 max="10">
+                 </td>
+             </tr>
+    </table>
+  </center>
+  <button class="sub" onclick="calculateSum()">Submit</button> 
+  <button class="Re" onclick="resetInputs()">Reset</button>
+  <p id="sumResult"></p>
+</div>
+
+<script>
+      function calculateSum() {
+        // Get all input elements within the table
+        var inputs = document.querySelectorAll('#markTable input[type="number"]');
+        var sum = 0;
+        // Iterate over each input element and add its value to the sum
+        inputs.forEach(function(input) {
+          sum += parseFloat(input.value) || 0; // Convert input value to float, default to 0 if NaN
+        });
+      
+        
+        window.location.href='finalRM.html?sum='+sum;
+      }
+      function resetInputs() {
+            var inputs = document.querySelectorAll('#markTable input[type="number"]');
+            inputs.forEach(function(input) {
+                input.value = '';
+            });
+            document.getElementById('sumResult').textContent = '';
+        }
+
+      </script>
+
+</script>
+</body>
+</html>
